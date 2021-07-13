@@ -4,9 +4,9 @@ const backBtn = document.querySelector(".back");
 const nextBtn = document.querySelector(".next");
 
 const SHOWING_CLASSNAME = "showing";
-const currentslide = document.querySelector(`.${SHOWING_CLASSNAME}`);
 
 function nextSlide() {
+  const currentslide = document.querySelector(`.${SHOWING_CLASSNAME}`);
   currentslide.classList.remove(SHOWING_CLASSNAME);
   const next = currentslide.nextElementSibling;
   if (next) {
@@ -17,6 +17,7 @@ function nextSlide() {
 }
 
 function backSlide() {
+  const currentslide = document.querySelector(`.${SHOWING_CLASSNAME}`);
   currentslide.classList.remove(SHOWING_CLASSNAME);
   const back = currentslide.previousElementSibling;
   if (back) {
