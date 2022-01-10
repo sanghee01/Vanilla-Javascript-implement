@@ -1,7 +1,7 @@
 const modal = document.querySelector(".modal");
-const openBtn = document.querySelector(".study-card__joinBtn");
+const openBtn = document.querySelector("#open");
 const overlay = document.querySelector(".modal__overlay");
-const closeBtn = document.querySelector("button");
+const closeBtn = document.querySelector("#close");
 
 const openModal = () => {
   modal.classList.remove("hidden");
