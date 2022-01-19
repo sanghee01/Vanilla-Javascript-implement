@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .activity__comment {
+        display: none;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="activity__comment-tog tog">댓글</button>
+      <ul class="activity__comment comm">
+        <li class="activity__comment-list">
+          <span class="activity__comment-name">이상희</span>
+          <span class="activity__comment-cont"
+            >알겠습니다. 다음 회의 때는 반영할게요.</span
+          >
+        </li>
+        <li class="activity__comment-list">
+          <span class="activity__comment-name">윤동규</span>
+          <span class="activity__comment-cont">네 알겠슴다~</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button class="activity__comment-tog tog">댓글</button>
+      <ul class="activity__comment comm">
+        <li class="activity__comment-list">
+          <span class="activity__comment-name">이상희</span>
+          <span class="activity__comment-cont"
+            >알겠습니다. 다음 회의 때는 반영할게요.</span
+          >
+        </li>
+        <li class="activity__comment-list">
+          <span class="activity__comment-name">윤동규</span>
+          <span class="activity__comment-cont">네 알겠슴다~</span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const toggle = document.querySelectorAll(".activity__comment-tog");
+      const cont = document.querySelectorAll(".activity__comment");
+
+      toggle.forEach((tog) =>
+        tog.addEventListener("click", function () {
+          console.dir(tog.nextElementSibling);
+          tog.nextElementSibling.classList.toggle("show");
+          //     const togId = this.class.replace("tog", "comm");
+
+          //     if (document.querySelector(togId).style.display === "block") {
+          //       document.querySelector(togId).style.display = "none";
+          //     } else {
+          //       document.querySelector(togId).style.display = "block";
+          //     }
+        })
+      );
+    </script>
+  </body>
+</html>
